@@ -1,31 +1,56 @@
-# Typescript html boilerplate
+# ASTRO GAME ENGINE
+-------------------
 
-This is a boilerplate code to play around with typescript, html and webpack. Use it as a base for your solutions.
+Astro game engine, is a typescript game engine, focused in simplicity, versatility, and light-weight.
+It was/is, strongly inspired by the lua game engine LOVE.
 
-## How to start
+### System
+- [ ] Graphics
+- [ ] Sound
+- [ ] Physics*
+  - [ ] World
+  - [ ] Bodies
+  - [ ] Collision Handler
+  - [ ] "Wireless Forces" (Effects Areas)
 
-Install the latest node (8.1.2). It should work with other versions too, but I have not checked.
+### Core Classes
+- [x] Game
+- [ ] Scene
+- [ ] Objects
+  - [ ] Components
 
-```bash
-$ npm install -g yarn
-$ cd {project folder, the one with package.json}
-$ yarn
-$ yarn dev
-```
+### Handlers
+- [x] Keyboard Handler
+- [ ] Mouse Handler
+- [ ] Controller (maybe)
+- [ ] Time Handler
+- [ ] Camera Handler (look love-sti camera)
 
-It should start dev server on `http://localhost:8080`.  
-There you should see something like this:  
+### Misc
+- [ ] Maths (vectors, random, etc...)
+- [ ] Saving/Loading
+- [ ] Image Loading
+- [ ] TileMap Creation/Tiled Loading
+- [ ] Integration with HTML for UI
 
-![png](http://res.cloudinary.com/daren64mz/image/upload/v1498347926/Selection_206_zqgp8d.png)
+*Compatibility with canvas
 
+## Study Table
+--------------
 
-## How to build
+- Physics for game dev
+- Code optimization
 
-```bash
-$ yarn build
-```
-The bundle is located in `./dist/` directory.
+## Version names
+----------------
 
-## Contributing
-
-Simplifications and fixes contributions are welcome!
+- Sol           0.1.0 - Dev
+- Mercúrio      0.2.0 - Alpha
+- Vênus         0.3.0 - Beta
+- Terra         1.0.0
+- Marte         2.0.0
+- Júpiter       3.0.0
+- Saturno       4.0.0
+- Urano         5.0.0
+- Netuno        6.0.0
+- Planeta 9     7.0.0

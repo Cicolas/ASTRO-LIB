@@ -1,12 +1,11 @@
 import Game from './lib/Game';
 import { Keyboard } from './lib/Keyboard';
+import { Vector2, Vector3, Vector4 } from './lib/Mathf';
 import {Primitives} from './lib/Primitives';
 
 class GameTest extends Game {
-    x: number = 0;
-    y: number = 0;
-    r: Primitives.Rectangle = new Primitives.Rectangle(200, 200, 100, 100);
-    
+    // r: Primitives.Rectangle = new Primitives.Rectangle(200, 200, 100, 100);
+
     constructor(canvas: CanvasRenderingContext2D) {
         super(canvas);
     }
@@ -16,28 +15,28 @@ class GameTest extends Game {
     }
 
     public override update = () => {
-        if (Keyboard.isDown("w")) {
-            this.y -= 2;
-        }
-        if (Keyboard.isDown("s")) {
-            this.y += 2;
-        }
-        if (Keyboard.isDown("a")) {
-            this.x -= 2;
-        }
-        if (Keyboard.isDown("d")) {
-            this.x += 2;
-        }
+        // if (Keyboard.isDown("w")) {
+        //     this.y -= 2;
+        // }
+        // if (Keyboard.isDown("s")) {
+        //     this.y += 2;
+        // }
+        // if (Keyboard.isDown("a")) {
+        //     this.x -= 2;
+        // }
+        // if (Keyboard.isDown("d")) {
+        //     this.x += 2;
+        // }
 
         // this.r.x = this.x;
         // this.r.y = this.y;
     }
     
     public override draw = () => {
-        this.canvas.clearRect(0, 0, 9999, 9999);
+        // this.canvas.clearRect(0, 0, 9999, 9999);
 
-        this.canvas.fillStyle = "red";
-        this.r.draw(this.canvas); 
+        // this.canvas.fillStyle = "red";
+        // this.r.draw(this.canvas); 
 
         requestAnimationFrame(this.draw);
     }
