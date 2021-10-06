@@ -30,4 +30,15 @@ export default abstract class Game {
      *  @param key your keyboard event of your key 
      */
     public onKeyUp?: (key: KeyboardEvent) => void;
+
+    /** 
+     *  onKeyDown callback is called when a key is pressed 
+     *  @param key your keyboard event of your key
+    */
+    public onMouseDown?: (button: MouseEvent) => void;
+    /** 
+      *  onKeyDown callback is called when a key is released
+      *  @param key your keyboard event of your key 
+      */
+    public onMouseUp?: (button: MouseEvent) => void;
 }

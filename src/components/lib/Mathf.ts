@@ -158,3 +158,69 @@ export interface Transform3D {
     position: Vector3;
     rotation: Vector3;
 }
+
+//----------------------------------------------------------------------
+// Random
+//----------------------------------------------------------------------
+
+export namespace Random {
+    export function Random(n: number = 1): number {
+        return Math.random()*n;
+    }
+
+    export function Range(min: number = 0, max: number = 0): number {
+        return (Math.random()*(max-min))+min;
+    }
+
+    export class WeightedRandom<Type> {
+        public randomList: Array<{obj: Type, weight: number}>;
+        public _randomPool: Array<Type>;
+
+        constructor(...args: {obj: Type, weight: number}[]) {
+            this.randomList = args;
+            console.log(this.randomList);
+        }
+
+        public GetRandom(): Type {
+            this.Shuffle(this.randomList);
+            this.SetupPool();
+            // console.log((Math.floor(Random()*this._randomPool.length)));         
+            return this._randomPool[(Math.floor(Random()*this._randomPool.length))];
+        }
+
+        private SetupPool(): void {
+            if(this._randomPool == null){
+                this._randomPool = new Array<Type>();
+            }
+
+            this._randomPool = new Array<Type>();
+
+            for (let i = 0; i < this.randomList.length; i++) {
+                for (let j = 0; j < Math.floor(this.randomList[i].weight); j++) { 
+                    this._randomPool.push(this.randomList[i].obj);
+                }
+            }
+        }
+
+        public Add(value: Type, w: number): void{
+            if (w <= 0)
+                return;
+
+            const weight1 = {obj: value, weight: w};
+
+            this.randomList.push(weight1);
+        }
+
+        private Shuffle(list: Array<{obj: Type, weight: number}>) {
+            let n: number = list.length;  
+            while (n > 1) {  
+                n--;  
+                const k: number = Math.floor(Random(n + 1));
+                let value: {obj: Type, weight: number} = list[k];
+                list[k] = list[n];  
+                list[n] = value;  
+            }
+            return list;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import Game from './lib/Game';
 import { Keyboard } from './lib/Keyboard';
-import { Vector2, Vector3, Vector4 } from './lib/Mathf';
+import { Random, Vector2, Vector3, Vector4 } from './lib/Mathf';
 import {Primitives} from './lib/Primitives';
 
 class GameTest extends Game {
@@ -10,8 +10,17 @@ class GameTest extends Game {
         super(canvas);
     }
     
-    public override load = () => {
-        console.log("load");
+    public override load = async () => {
+        const a = new Random.WeightedRandom(
+            {obj: 1, weight: 1}, 
+            {obj: 2, weight: 2},
+            {obj: 3, weight: 3},
+        );
+
+        for (let i = 0; i < 10; i++) {
+            // a.GetRandom();
+            // console.log(a.GetRandom()); 
+        }
     }
 
     public override update = () => {

@@ -21,13 +21,16 @@ It was/is, strongly inspired by the lua game engine LOVE.
 
 ### Handlers
 - [x] Keyboard Handler
-- [ ] Mouse Handler
+- [x] Mouse Handler
 - [ ] Controller (maybe)
 - [ ] Time Handler
 - [ ] Camera Handler (look love-sti camera)
 
 ### Misc
-- [ ] Maths (vectors, random, etc...)
+- [x] Maths (vectors, random, etc...)
+  - [x] Vector
+  - [x] Transform
+  - [x] Random
 - [ ] Saving/Loading
 - [ ] Image Loading
 - [ ] TileMap Creation/Tiled Loading
