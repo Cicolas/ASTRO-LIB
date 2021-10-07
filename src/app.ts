@@ -10,7 +10,6 @@ class App {
         s.className = "centralize";
         s.innerHTML = "GameTest";
 
-
         element.appendChild(s);
         element.appendChild(canvasElement);
         return element;

@@ -23,7 +23,6 @@ It was/is, strongly inspired by the lua game engine LOVE.
 - [x] Keyboard Handler
 - [x] Mouse Handler
 - [ ] Controller (maybe)
-- [ ] Time Handler
 - [ ] Camera Handler (look love-sti camera)
 
 ### Misc
@@ -36,7 +35,7 @@ It was/is, strongly inspired by the lua game engine LOVE.
 - [ ] TileMap Creation/Tiled Loading
 - [ ] Integration with HTML for UI
 
-*Compatibility with canvas
+Compatibility with canvas
 
 ## Study Table
 --------------
