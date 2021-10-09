@@ -7,7 +7,7 @@
 //----------------------------------------------------------------------
 // TODO: Vactors inheritance aren't working
 
-class Vectors {
+export class Vectors {
     _: number[];
     constructor(size: number) {
         this._ = new Array<number>(size);
@@ -156,6 +156,16 @@ export class Vector2 implements Vectors{
     }
 
     /**
+     * @returns the vector square rooted
+     */
+    sqrt(p: number = 2): Vector2 {
+        const v = new Vector2();
+        v._[0] = this._[0]**1/p;
+        v._[1] = this._[1]**1/p;
+        return v;
+    }
+
+    /**
      * @returns return the magnitude of the vector
      */
     magnitude(): number {
@@ -208,8 +218,8 @@ export class Vector3 implements Vectors{
      * @param value other vector to add
      * @returns return the sum of the two vectors
      */
-    add(other: Vectors): Vector2 {
-        const v = new Vector2(this._.length);
+    add(other: Vectors): Vector3 {
+        const v = new Vector3();
         v._[0] = this._[0] + (other._[0] ? other._[0] : 0);
         v._[1] = this._[1] + (other._[1] ? other._[1] : 0);
         v._[2] = this._[2] + (other._[2] ? other._[2] : 0);
@@ -221,8 +231,8 @@ export class Vector3 implements Vectors{
      * @param value other vector2 to subtract
      * @returns return the subtract of the two vectors
      */
-    subtract(other: Vectors): Vector2 {
-        const v = new Vector2(this._.length);
+    subtract(other: Vectors): Vector3 {
+        const v = new Vector3();
         v._[0] = this._[0] - (other._[0] ? other._[0] : 0);
         v._[1] = this._[1] - (other._[1] ? other._[1] : 0);
         v._[2] = this._[2] - (other._[2] ? other._[2] : 0);
@@ -234,8 +244,8 @@ export class Vector3 implements Vectors{
      * @param value value to multiply
      * @returns return the multiplicated vector
      */
-    multiply(value: number): Vector2 {
-        const v = new Vector2(this._.length);
+    multiply(value: number): Vector3 {
+        const v = new Vector3();
         v._[0] = this._[0] * value;
         v._[1] = this._[1] * value;
         v._[2] = this._[2] * value;
@@ -247,11 +257,22 @@ export class Vector3 implements Vectors{
      * @param value value to divide
      * @returns return the divided vector
      */
-    divide(value: number): Vector2 {
-        const v = new Vector2();
+    divide(value: number): Vector3 {
+        const v = new Vector3();
         v._[0] = this._[0] / value;
         v._[1] = this._[1] / value;
         v._[2] = this._[2] / value;
+        return v;
+    }
+
+    /**
+     * @returns the vector square rooted
+     */
+    sqrt(p: number = 2): Vector3 {
+        const v = new Vector3();
+        v._[0] = this._[0]**1/p;
+        v._[1] = this._[1]**1/p;
+        v._[2] = this._[2]**1/p;
         return v;
     }
 

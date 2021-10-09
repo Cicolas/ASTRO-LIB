@@ -5,7 +5,7 @@ Astro game engine, is a typescript game engine, focused in simplicity, versatili
 It was/is, strongly inspired by the lua game engine LOVE.
 
 ### System
-- [ ] Graphics
+- [x] Graphics
 - [ ] Sound
 - [ ] Physics*
   - [ ] World
@@ -42,6 +42,7 @@ Compatibility with canvas
 
 - Physics for game dev
 - Code optimization
+- PIXIJS for graphics
 
 ## Version names
 ----------------

@@ -1,6 +1,6 @@
 import { Vector2 } from "./Mathf";
 
-export namespace Mouse{
+namespace Mouse{
     export let position: Vector2;
     let pressedMouse: number[] = [];
 
@@ -30,3 +30,5 @@ export namespace Mouse{
         pressedMouse = pressedMouse.filter(k => k != key);
     }
 }
+
+export default Mouse;

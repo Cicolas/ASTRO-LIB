@@ -1,4 +1,4 @@
-export namespace Keyboard {
+namespace Keyboard {
     let pressedKeys: string[] = [];
 
     /** 
@@ -6,8 +6,16 @@ export namespace Keyboard {
      * @param key wich key are verifing
      * @returns if the key is pressed or not
      */
-    export function isDown(key: string): boolean {
+    export function isDown(key: string): boolean {                
         return pressedKeys.includes(key);
+    }
+
+    /**
+     * return last key pressed, very usefull for multiple input cases
+     * @returns the last key pressed
+     */
+    export function getLastPresed(): string{
+        return pressedKeys[pressedKeys.length-1];
     }
 
     /**
@@ -27,3 +35,5 @@ export namespace Keyboard {
         pressedKeys = pressedKeys.filter(k => k != key);
     }
 }
+
+export default Keyboard;

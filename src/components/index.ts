@@ -1,24 +1,33 @@
 import GameTest from './game';
-import { Keyboard } from './lib/Keyboard';
+import Graphics from './lib/Graphics';
+import Keyboard from './lib/Keyboard';
+import Mouse from './lib/Mouse';
 import { Vector2 } from './lib/Mathf';
-import { Mouse } from './lib/Mouse';
 
 const canvasElement: HTMLCanvasElement = document.createElement("canvas") as HTMLCanvasElement;
-canvasElement.width = 500;
-canvasElement.height = 500;
-const canvas: CanvasRenderingContext2D = canvasElement.getContext("2d");
-canvas.imageSmoothingEnabled = false;
+canvasElement.width = window.innerWidth;
+canvasElement.height = window.innerHeight;
+const c: CanvasRenderingContext2D = canvasElement.getContext("2d");
+c.imageSmoothingEnabled = false;
+console.log(c);
 
-const  a = new GameTest(canvas);
+let dt: number = 0;
+let _timeElapsed = 0;
+const  a = new GameTest();
 console.log(a);
 a.load();
-// setInterval(a.update, (1/75)*1000);
-// setInterval(a.draw, (1/75)*1000);
+
+Graphics.canvas = c;
+
 function UpdateNRender() {
     requestAnimationFrame((t) => {
-        UpdateNRender();
-        a.update();
+        dt = (t-_timeElapsed)/1000;
+        _timeElapsed = t;
+        
+        a.update(dt);
         a.draw();
+
+        UpdateNRender();
     });
 }
 UpdateNRender();
