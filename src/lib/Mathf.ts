@@ -112,7 +112,7 @@ export class Vector2 implements Vectors{
      * @param value other vector to add
      * @returns return the sum of the two vectors
      */
-    add(other: Vectors): Vector2 {
+    add(other: Vector2): Vector2 {
         const v = new Vector2(this._.length);
         v._[0] = this._[0] + (other._[0] ? other._[0] : 0);
         v._[1] = this._[1] + (other._[1] ? other._[1] : 0);
@@ -180,7 +180,7 @@ export class Vector2 implements Vectors{
      */
     normalize(): Vector2 {
         const v: number = this.magnitude();
-        const f = v == 0 ? null : this.divide(v);
+        const f = v == 0 ? new Vector2() : this.divide(v);
         return f;
     }
 }

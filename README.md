@@ -26,6 +26,7 @@ It was/is, strongly inspired by the lua game engine LOVE.
 - [ ] Camera Handler (look love-sti camera)
 
 ### Misc
+- [x] Improve Usability
 - [x] Maths (vectors, random, etc...)
   - [x] Vector
   - [x] Transform

@@ -1,6 +1,11 @@
-import { Vectors } from "./Mathf";
+export interface ColorInterface {
+    r: number,
+    g: number,
+    b: number,
+    a?: number
+}
 
-export default class Color{
+export default class Color implements ColorInterface{
     _: number[] = [];
     
     public get r(): number {

@@ -7,7 +7,9 @@
         "sourceMap": true,
         "strict": false,
         "experimentalDecorators": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+		"outDir": "lib/",
+        "declaration": true
     },
     "filesGlob": [
         "types/**/*.d.ts",

@@ -1,7 +1,7 @@
 import Graphics from "./Graphics";
 import { Transform, Vector2 } from "./Mathf";
 
-export namespace Primitives{
+namespace Primitives{
     export class Rectangle {
         public offset: Vector2;
         public transform: Transform = new Transform;
@@ -151,4 +151,5 @@ export namespace Primitives{
         }
     }
 }
-    
+
+export default Primitives;
