@@ -8,16 +8,16 @@ It was/is, strongly inspired by the lua game engine LOVE.
 - [x] Graphics
 - [ ] Sound
 - [ ] Physics*
-  - [ ] World
-  - [ ] Bodies
-  - [ ] Collision Handler
-  - [ ] "Wireless Forces" (Effects Areas)
+- [x] World
+- [x] Bodies
+- [ ] Collision Handler
+- [ ] "Wireless Forces" (Effects Areas)
 
 ### Core Classes
 - [x] Game
 - [ ] Scene
 - [ ] Objects
-  - [ ] Components
+- [ ] Components
 
 ### Handlers
 - [x] Keyboard Handler
@@ -28,11 +28,11 @@ It was/is, strongly inspired by the lua game engine LOVE.
 ### Misc
 - [x] Improve Usability
 - [x] Maths (vectors, random, etc...)
-  - [x] Vector
-  - [x] Transform
-  - [x] Random
+- [x] Vector
+- [x] Transform
+- [x] Random
+- [x] Image Loading
 - [ ] Saving/Loading
-- [ ] Image Loading
 - [ ] TileMap Creation/Tiled Loading
 - [ ] Integration with HTML for UI
 
