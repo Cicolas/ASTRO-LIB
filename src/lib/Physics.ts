@@ -85,13 +85,22 @@ namespace Beta.Physics {
                     const h2 = value.shape.height;
 
                     const x1 =
-                        object.transform.position.x - object.shape.offset.x;
+                        object.transform.position.x - 
+                        Math.abs(Math.cos(object.transform.rotation)*object.shape.width/2) - //dá offset da posição para o meio no eixo x
+                        Math.abs(Math.sin(object.transform.rotation)*object.shape.height/2) ; //se estiver na vertical sua largura = altura 
                     const y1 =
-                        object.transform.position.y - object.shape.offset.y;
+                        object.transform.position.y - 
+                        Math.abs(Math.sin(object.transform.rotation)*object.shape.width/2) - //dá offset da posição para o meio no eixo y
+                        Math.abs(Math.cos(object.transform.rotation)*object.shape.height/2); //se estiver na vertical sua altura = altura 
+                    
                     const x2 =
-                        value.transform.position.x - value.shape.offset.x;
+                        value.transform.position.x - 
+                        Math.abs(Math.cos(value.transform.rotation)*value.shape.width/2) - //dá offset da posição para o meio no eixo x
+                        Math.abs(Math.sin(value.transform.rotation)*value.shape.height/2) ; //se estiver na vertical sua largura = altura 
                     const y2 =
-                        value.transform.position.y - value.shape.offset.y;
+                        value.transform.position.y - 
+                        Math.abs(Math.sin(value.transform.rotation)*value.shape.width/2) - //dá offset da posição para o meio no eixo y
+                        Math.abs(Math.cos(value.transform.rotation)*value.shape.height/2); //se estiver na vertical sua altura = altura 
 
                     if (
                         x1 + w1 >= x2 &&
@@ -146,6 +155,7 @@ namespace Beta.Physics {
                 );
             }
             this.shape.transform.position = this.transform.position;
+            this.shape.transform.rotation = this.transform.rotation;
         }
 
         // TODO: Add mass to equation
